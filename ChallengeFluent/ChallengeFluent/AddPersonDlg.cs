@@ -1,4 +1,6 @@
-﻿using Model;
+﻿using ChallengeFluent.Validators;
+using FluentValidation.Results;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +27,8 @@ namespace ChallengeFluent
         {
             StatusLabel.Text = "";
             _errors.Clear();
+            Errors.Items.Clear();
+
 
             if (!int.TryParse(this.Id.Text, out int _id))
             {
@@ -44,6 +48,18 @@ namespace ChallengeFluent
             _p.Address.ZipCode = "";
 
             #region //Fluent validation
+            PersonValidator _validator = new PersonValidator();
+            var results = _validator.Validate(_p);
+            if(results.IsValid==false)
+            {
+                foreach(ValidationFailure error in results.Errors)
+                {
+                    Errors.Items.Add(error.ErrorMessage);
+                }
+            }
+
+
+
 
             #endregion
             StatusLabel.Text = "Complete";
