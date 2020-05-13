@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1082
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeFluent", "ChallengeFluent\ChallengeFluent.csproj", "{7124C692-10FB-4C0D-8572-EC159B313436}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\MongoDbChallenge\Model\Model.csproj", "{308ABF82-9519-44F3-B1ED-9405015691BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7124C692-10FB-4C0D-8572-EC159B313436}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7124C692-10FB-4C0D-8572-EC159B313436}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7124C692-10FB-4C0D-8572-EC159B313436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{308ABF82-9519-44F3-B1ED-9405015691BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{308ABF82-9519-44F3-B1ED-9405015691BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{308ABF82-9519-44F3-B1ED-9405015691BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{308ABF82-9519-44F3-B1ED-9405015691BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
