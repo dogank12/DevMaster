@@ -57,5 +57,9 @@ namespace ChallengeFluent
             StatusLabel.Text = "Complete";
         }
 
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

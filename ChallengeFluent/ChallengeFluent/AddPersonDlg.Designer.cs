@@ -40,11 +40,12 @@
             this.Errors = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.StatusLabel = new System.Windows.Forms.Label();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstName
             // 
-            this.FirstName.Location = new System.Drawing.Point(23, 91);
+            this.FirstName.Location = new System.Drawing.Point(23, 80);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(129, 20);
             this.FirstName.TabIndex = 0;
@@ -52,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 74);
+            this.label1.Location = new System.Drawing.Point(20, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
@@ -61,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(172, 74);
+            this.label2.Location = new System.Drawing.Point(166, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 3;
@@ -69,7 +70,7 @@
             // 
             // LastName
             // 
-            this.LastName.Location = new System.Drawing.Point(169, 91);
+            this.LastName.Location = new System.Drawing.Point(169, 80);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(121, 20);
             this.LastName.TabIndex = 2;
@@ -77,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 30);
+            this.label3.Location = new System.Drawing.Point(26, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 5;
@@ -85,14 +86,14 @@
             // 
             // Id
             // 
-            this.Id.Location = new System.Drawing.Point(23, 47);
+            this.Id.Location = new System.Drawing.Point(23, 36);
             this.Id.Name = "Id";
             this.Id.Size = new System.Drawing.Size(129, 20);
             this.Id.TabIndex = 4;
             // 
             // DateOfBirthTimePicker
             // 
-            this.DateOfBirthTimePicker.Location = new System.Drawing.Point(23, 140);
+            this.DateOfBirthTimePicker.Location = new System.Drawing.Point(23, 124);
             this.DateOfBirthTimePicker.Name = "DateOfBirthTimePicker";
             this.DateOfBirthTimePicker.Size = new System.Drawing.Size(129, 20);
             this.DateOfBirthTimePicker.TabIndex = 6;
@@ -100,7 +101,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 124);
+            this.label4.Location = new System.Drawing.Point(20, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 8;
@@ -108,9 +109,10 @@
             // 
             // CreateNewPerson
             // 
-            this.CreateNewPerson.Location = new System.Drawing.Point(302, 182);
+            this.CreateNewPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CreateNewPerson.Location = new System.Drawing.Point(316, 194);
             this.CreateNewPerson.Name = "CreateNewPerson";
-            this.CreateNewPerson.Size = new System.Drawing.Size(160, 32);
+            this.CreateNewPerson.Size = new System.Drawing.Size(69, 24);
             this.CreateNewPerson.TabIndex = 9;
             this.CreateNewPerson.Text = "Create New";
             this.CreateNewPerson.UseVisualStyleBackColor = true;
@@ -118,16 +120,19 @@
             // 
             // Errors
             // 
+            this.Errors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Errors.FormattingEnabled = true;
-            this.Errors.Location = new System.Drawing.Point(302, 47);
+            this.Errors.Location = new System.Drawing.Point(315, 36);
             this.Errors.Name = "Errors";
-            this.Errors.Size = new System.Drawing.Size(160, 121);
+            this.Errors.Size = new System.Drawing.Size(164, 108);
             this.Errors.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 30);
+            this.label5.Location = new System.Drawing.Point(313, 19);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 11;
@@ -135,17 +140,31 @@
             // 
             // StatusLabel
             // 
+            this.StatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.StatusLabel.AutoSize = true;
-            this.StatusLabel.Location = new System.Drawing.Point(299, 217);
+            this.StatusLabel.Location = new System.Drawing.Point(20, 205);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(0, 13);
+            this.StatusLabel.Size = new System.Drawing.Size(35, 13);
             this.StatusLabel.TabIndex = 12;
+            this.StatusLabel.Text = "status";
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExitButton.Location = new System.Drawing.Point(411, 194);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(69, 24);
+            this.ExitButton.TabIndex = 13;
+            this.ExitButton.Text = "E&xit";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // AddPersonDlg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 236);
+            this.ClientSize = new System.Drawing.Size(491, 227);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.StatusLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Errors);
@@ -179,6 +198,7 @@
         private System.Windows.Forms.ListBox Errors;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label StatusLabel;
+        private System.Windows.Forms.Button ExitButton;
     }
 }
 
