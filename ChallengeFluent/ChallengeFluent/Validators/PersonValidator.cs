@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChallengeFluent.Validators
 {
-    public class PersonValidator: AbstractValidator<PersonModel>
+    public class PersonValidator: AbstractValidator<PersonIdModel>
     {
         public PersonValidator()
         {
@@ -29,6 +28,9 @@ namespace ChallengeFluent.Validators
 
             RuleFor(p => p.DateOfBirth)
                 .Must(BeAValidAge).WithMessage("Invalid {PropertyName}");
+
+            RuleFor(p => p.Id)
+                .Must(BeAValidInt).WithMessage("You too low number for {PropertyName}, be positive.");
         }
 
         protected bool BeAValidName(string Name)
@@ -49,6 +51,15 @@ namespace ChallengeFluent.Validators
 
             if (dobYear <= currentYear && dobYear > (currentYear - 120))
                 return true;
+            return false;
+        }
+
+
+        protected bool BeAValidInt(int Number)
+        {
+            if (Number >= 0)
+                return true;
+
             return false;
         }
     }

@@ -59,6 +59,7 @@
     <Compile Include="AddPersonDlg.Designer.cs">
       <DependentUpon>AddPersonDlg.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonIdModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validators\PersonValidator.cs" />

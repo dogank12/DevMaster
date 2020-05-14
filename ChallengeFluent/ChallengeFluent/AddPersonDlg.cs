@@ -34,7 +34,7 @@ namespace ChallengeFluent
                 _errors.Add("Invalid id");
                 return;
             }
-            PersonModel _p = new PersonModel();
+            PersonIdModel _p = new PersonIdModel();
             
             _p.FirstName = FirstName.Text;
             _p.LastName = LastName.Text;
@@ -45,6 +45,7 @@ namespace ChallengeFluent
             _p.Address.State = "";
             _p.Address.StreetAddress = "";
             _p.Address.ZipCode = "";
+            _p.Id = _id;
 
             #region //Fluent validation
             PersonValidator _validator = new PersonValidator();
