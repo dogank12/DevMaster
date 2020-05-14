@@ -21,18 +21,17 @@ namespace ChallengeFluent
         public AddPersonDlg()
         {
             InitializeComponent();
+            Errors.DataSource = _errors;
         }
 
         private void CreateNewPerson_Click(object sender, EventArgs e)
         {
             StatusLabel.Text = "";
             _errors.Clear();
-            Errors.Items.Clear();
-
 
             if (!int.TryParse(this.Id.Text, out int _id))
             {
-                _errors.Add("Invalid Age");
+                _errors.Add("Invalid id");
                 return;
             }
             PersonModel _p = new PersonModel();
@@ -49,17 +48,10 @@ namespace ChallengeFluent
 
             #region //Fluent validation
             PersonValidator _validator = new PersonValidator();
-            var results = _validator.Validate(_p);
-            if(results.IsValid==false)
-            {
-                foreach(ValidationFailure error in results.Errors)
-                {
-                    Errors.Items.Add(error.ErrorMessage);
-                }
-            }
-
-
-
+            var _results = _validator.Validate(_p);
+            if(_results.IsValid==false)
+                foreach(ValidationFailure error in _results.Errors)
+                    _errors.Add(error.ErrorMessage);
 
             #endregion
             StatusLabel.Text = "Complete";
